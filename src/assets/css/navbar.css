@@ -1,0 +1,31 @@
+.navbar {
+  width: 100%;
+  height: 60px;
+  background-color: rgb(230, 248, 247);
+  display: flex;
+  justify-content: space-between;
+  border-radius: 5px;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.navbar .logo img {
+  width: 150px;
+  height: 50px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.navigation {
+  width: 20%;
+  display: flex;
+  justify-content: space-around;
+  text-transform: uppercase;
+  line-height: 60px;
+  cursor: pointer;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.navigation p:hover {
+  background-color: rgba(98, 222, 241, 0.2);
+}

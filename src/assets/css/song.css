@@ -1,0 +1,24 @@
+.song-container {
+  width: 100%;
+  margin-top: 5px;
+  background-color: rgb(230, 248, 247);
+  border-radius: 5px;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-around;
+}
+
+.song-container .lyric {
+  width: 25%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+}
+.song-container .lyric p {
+  font-size: 20px;
+}
+.song-container .details {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+}
