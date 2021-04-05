@@ -1,4 +1,8 @@
-import { GET_LYRICS, GET_SONG_BY_ID } from "../actionTypes";
+import {
+  GET_LYRICS,
+  GET_SONG_BY_ID,
+  GET_SONG_BY_ALPHABET,
+} from "../actionTypes";
 
 const initialState = {
   lyrics: [],
@@ -13,6 +17,11 @@ const lyricReducer = (state = initialState, action) => {
         lyrics: payload,
       };
     case GET_SONG_BY_ID:
+      return {
+        ...state,
+        lyrics: payload,
+      };
+    case GET_SONG_BY_ALPHABET:
       return {
         ...state,
         lyrics: payload,
