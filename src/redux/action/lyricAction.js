@@ -3,6 +3,7 @@ import {
   GET_LYRICS,
   GET_SONG_BY_ID,
   GET_SONG_BY_ALPHABET,
+  SEARCH_DATA,
 } from "../actionTypes";
 
 export const getAllSongs = (page = 1) => (dispatch) => {
@@ -40,6 +41,20 @@ export const getSongByAlphabet = (alphabet) => (dispatch) => {
       console.log("res =>", res);
       dispatch({
         type: GET_SONG_BY_ALPHABET,
+        payload: res.data,
+      });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+};
+export const search = (keyword) => (dispatch) => {
+  axios
+    .get(`https://my-lyrics.000webhostapp.com/song/search/${keyword}`)
+    .then((res) => {
+      console.log("res =>", res);
+      dispatch({
+        type: SEARCH_DATA,
         payload: res.data,
       });
     })
